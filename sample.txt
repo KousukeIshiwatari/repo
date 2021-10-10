@@ -9,3 +9,14 @@ ssh -T github
 git remote add origin git@github.com:KousukeIshiwatari/repo.git
 
 cd ~/.ssh
+
+# sshキー生成
+ssh-keygen -t rsa -b 4096 -C"メールアドレス"
+
+git remote add origin 〜は.git/configファイルに [remote "origin"] の設定を追記するコマンド
+
+git remote rm originすると、.git/configファイルの [remote "origin”] の設定が削除される。
+
+[remote "origin"] の設定を削除後にgit remote add origin 〜を実行すると、その設定が.git/configファイルに追記される。
+
+git remote リモートリポジトリの一覧を表示する。
